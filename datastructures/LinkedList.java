@@ -38,6 +38,35 @@ public class LinkedList
         return list;
     }
 
+    public static LinkedList deleteNode(LinkedList list, int pos)
+    {
+        LinkedListNode currNode = list.head;
+        LinkedListNode prev = null;
+
+        if(pos == 0 && currNode != null)
+        {
+            list.head = currNode.next;
+            System.out.println( pos + "  position element deleted");
+            return list;
+        }
+
+        for(int i = 0; i < pos; i++)
+        {
+            prev = currNode;
+            currNode = currNode.next;
+            if(currNode == null)
+            {
+                System.out.println(pos + " position element not found");
+            }
+            
+        }
+
+        prev.next = currNode.next;
+        System.out.println(pos + " position element deleted");
+        
+        return list;
+    }
+
     //to print the LinkedList.
     public static void printList(LinkedList list)
     {
