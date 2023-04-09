@@ -15,7 +15,7 @@ public class LinkedList
             this.next = null;
         }
     }
-
+    //Method to insert an element at first of the LinkedList 
     public static LinkedList insertNode(LinkedList list, int data)
     {
         LinkedListNode newNode = new LinkedListNode(data);
@@ -38,6 +38,7 @@ public class LinkedList
         return list;
     }
 
+    //Method to delete element at specific position
     public static LinkedList deleteNode(LinkedList list, int pos)
     {
         LinkedListNode currNode = list.head;
