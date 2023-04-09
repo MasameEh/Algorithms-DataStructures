@@ -47,7 +47,7 @@ public class LinkedList
         if(pos == 0 && currNode != null)
         {
             list.head = currNode.next;
-            System.out.println( pos + "  position element deleted");
+            System.out.println("element at postion " + pos + " deleted");
             return list;
         }
         
@@ -58,7 +58,7 @@ public class LinkedList
             if(counter == pos)
             {
                 prev.next = currNode.next;
-                System.out.println(pos + " position element deleted");
+                System.out.println("element at postion " + pos + " deleted");
                 break;
             }
             else
@@ -70,7 +70,7 @@ public class LinkedList
         }
         if(currNode == null)
         {
-            System.out.println("element at postion " + pos + " not found" );
+            System.out.println("element at postion " + pos + " not found");
         }
         return list;
     }
