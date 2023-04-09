@@ -49,25 +49,32 @@ public class LinkedList
             System.out.println( pos + "  position element deleted");
             return list;
         }
-
-        for(int i = 0; i < pos; i++)
-        {
-            prev = currNode;
-            currNode = currNode.next;
-            if(currNode == null)
-            {
-                System.out.println(pos + " position element not found");
-            }
-            
-        }
-
-        prev.next = currNode.next;
-        System.out.println(pos + " position element deleted");
         
+        int counter = 0;
+        
+        while(currNode != null)
+        {
+            if(counter == pos)
+            {
+                prev.next = currNode.next;
+                System.out.println(pos + " position element deleted");
+                break;
+            }
+            else
+            {
+                counter++;
+                prev = currNode;
+                currNode = currNode.next;
+            }
+        }
+        if(currNode == null)
+        {
+            System.out.println("element at postion " + pos + " not found" );
+        }
         return list;
     }
 
-    //to print the LinkedList.
+    //Method to print the LinkedList.
     public static void printList(LinkedList list)
     {
         LinkedListNode currNode = list.head;
@@ -86,9 +93,9 @@ public class LinkedList
 
         insertNode(list, 0);
         insertNode(list, 2);
-        insertNode(list, 3);
         insertNode(list, 5);
-        
+        deleteNode(list, 5);
+        deleteNode(list, 1);
         
         printList(list);
     }
