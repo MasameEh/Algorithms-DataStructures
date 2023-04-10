@@ -15,7 +15,7 @@ public class LinkedList
             this.next = null;
         }
     }
-    //Method to insert an element at first of the LinkedList 
+    //Method to insert an element at last of the LinkedList 
     public static LinkedList insertNode(LinkedList list, int data)
     {
         LinkedListNode newNode = new LinkedListNode(data);
@@ -28,12 +28,27 @@ public class LinkedList
         } 
         else 
         {
-            
             while(lastNode.next != null)
             {
                 lastNode = lastNode.next;
             }
             lastNode.next = newNode;
+        }
+        return list;
+    }
+
+    //Method to insert an element at first the LinkedList
+    public static LinkedList insertNodeAtFirst(LinkedList list, int data)
+    {
+        LinkedListNode newNode = new LinkedListNode(data);
+        if(list.head == null)
+        {
+            list.head = newNode;
+        } 
+        else
+        {
+             newNode.next = list.head;
+             list.head = newNode;
         }
         return list;
     }
@@ -92,11 +107,13 @@ public class LinkedList
     {
         LinkedList list = new LinkedList();
 
+        
         insertNode(list, 0);
         insertNode(list, 2);
+        insertNodeAtFirst(list, 4);
         insertNode(list, 5);
-        deleteNode(list, 5);
-        deleteNode(list, 1);
+        insertNodeAtFirst(list, 8);
+        
         
         printList(list);
     }
