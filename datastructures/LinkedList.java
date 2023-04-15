@@ -117,5 +117,5 @@ public class LinkedList
         
         printList(list);
     }
-}
+};
 
