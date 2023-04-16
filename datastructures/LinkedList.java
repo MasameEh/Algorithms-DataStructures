@@ -36,7 +36,6 @@ public class LinkedList
         }
         return list;
     }
-
     //Method to insert an element at first the LinkedList
     public static LinkedList insertNodeAtFirst(LinkedList list, int data)
     {
@@ -52,7 +51,6 @@ public class LinkedList
         }
         return list;
     }
-
     //Method to delete element at specific position
     public static LinkedList deleteNode(LinkedList list, int pos)
     {
@@ -89,7 +87,6 @@ public class LinkedList
         }
         return list;
     }
-
     //Method to print the LinkedList.
     public static void printList(LinkedList list)
     {
