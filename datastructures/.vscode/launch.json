@@ -15,8 +15,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/Data Structures/datastructures/Queue",
-      "program": "e:/Data Structures/datastructures/Queue/build/Debug/outDebug",
+      "cwd": "e:/Data Structures/datastructures",
+      "program": "e:/Data Structures/datastructures/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
