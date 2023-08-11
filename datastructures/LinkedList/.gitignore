@@ -1,6 +1,7 @@
 # Ignore compiled binaries and objects
 *.exe
 *.o
+*.class
 
 # Ignore system and IDE files
 .DS_Store
