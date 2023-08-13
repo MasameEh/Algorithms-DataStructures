@@ -1,5 +1,11 @@
 #include "DoubleLinkedList.h"
 
+/**
+ * @brief Inserts a new node at the beginning of the doubly linked list.
+ * 
+ * @param List Pointer to the head pointer of the list.
+ * @param Data Data value to be stored in the new node.
+ */
 void insertNodeAtBeginning(struct Node **List, uint32 Data)
 {
     // Allocate memory for the new node
@@ -32,7 +38,12 @@ void insertNodeAtBeginning(struct Node **List, uint32 Data)
 
 }
 
-
+/**
+ * @brief Inserts a new node at the end of the doubly linked list.
+ * 
+ * @param List Pointer to the head pointer of the list.
+ * @param Data Data value to be stored in the new node.
+ */
 void insertNodeAtEnd(struct Node **List, uint32 Data)
 {
     // Allocate memory for the new node
@@ -68,7 +79,13 @@ void insertNodeAtEnd(struct Node **List, uint32 Data)
     }
 }
 
-
+/**
+ * @brief Inserts a new node after a specified position in the doubly linked list.
+ * 
+ * @param List Pointer to the head node of the list.
+ * @param Data Data value to be stored in the new node.
+ * @param position Position after which the new node is to be inserted.
+ */
 void insertNodeAfter(struct Node *List, uint32 Data, uint32 position)
 {
     struct Node *tempNode = NULL; // Points to the new node 
@@ -113,7 +130,13 @@ void insertNodeAfter(struct Node *List, uint32 Data, uint32 position)
 
 }
 
-
+/**
+ * @brief Inserts a new node before a specified position in the doubly linked list.
+ * 
+ * @param List Pointer to the head node of the list.
+ * @param Data Data value to be stored in the new node.
+ * @param position Position after which the new node is to be inserted.
+ */
 void insertNodeBefore(struct Node **List, uint32 Data, uint32 position)
 {
     struct Node *tempNode = NULL; // Points to the new node 
@@ -159,7 +182,11 @@ void insertNodeBefore(struct Node **List, uint32 Data, uint32 position)
 
 }
 
-
+/**
+ * @brief Delete a new node at the beginning of the list
+ * 
+ * @param List Pointer to the head node of the list.
+ */
 void deleteNodeAtBeginning(struct Node **List)
 {
     // Check if the list is empty
@@ -177,7 +204,11 @@ void deleteNodeAtBeginning(struct Node **List)
     }
 }
 
-
+/**
+ * @brief Delete a new node at the end of the list
+ * 
+ * @param List Pointer to the head node of the list.
+ */
 void deleteNodeAtEnd(struct Node *List)
 {
     struct Node *prevLastNode = NULL;
@@ -201,7 +232,12 @@ void deleteNodeAtEnd(struct Node *List)
     }
 }
 
-
+/**
+ * @brief Delete a new node at a specified position in the doubly linked list.
+ * 
+ * @param List Pointer to the head node of the list.
+ * @param position Position which the node is to be deleted.
+ */
 void deleteNodeAtIntermediate(struct Node **List, uint32 position)
 {   
     struct Node *previousNode = NULL;  // Traverse to the needed node 
@@ -244,18 +280,24 @@ void deleteNodeAtIntermediate(struct Node **List, uint32 position)
     }
 }
 
-
+/**
+ * @brief Displays all nodes in the doubly linked list in forward order.
+ * 
+ * @param List Pointer to the head node of the list.
+ */
 void displayAllNodesForward(struct Node *List)
 {
     struct Node *tempNode = List;
 
     printf("\nTraversal in forward direction ==> ");
     printf("Data : ");
+    // Traverse the list and print the data of each node
     printf("%d -> ", tempNode->NodeData);
     while(tempNode->RightNodeLink != NULL){
         tempNode = tempNode->RightNodeLink;
         printf("%d -> ", tempNode->NodeData);
     }
+    // Print "NULL" if we have reached the end of the list
     if(NULL == tempNode->RightNodeLink){
         printf("NULL");
     }
