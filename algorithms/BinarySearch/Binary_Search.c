@@ -9,8 +9,8 @@ typedef signed int sint32;
 
 uint32 My_Data[DATA_MAX_SIZE] = {11, 22, 33, 44, 55, 66, 77, 88 ,99 ,100};
 
-sint32 binarySearchAlgorithm_1(uint32 data[], uint32 endIndex, uint32 startIndex ,uint32 reqData);
-sint32 binarySearchAlgorithm_2(uint32 data[], uint32 endIndex, uint32 startIndex ,uint32 reqData);
+sint32 binarySearchAlgorithm_1(uint32 data[], uint32 endIndex, uint32 startIndex, uint32 reqData);
+sint32 binarySearchAlgorithm_2(uint32 data[], uint32 endIndex, uint32 startIndex, uint32 reqData);
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     ret = binarySearchAlgorithm_1(My_Data, DATA_MAX_SIZE-1, 0, 22); //1
     printf("Element is found with index = %i \n", ret);
 
-    ret = binarySearchAlgorithm_2(My_Data, DATA_MAX_SIZE-1, 0, 22); //4
+    ret = binarySearchAlgorithm_2(My_Data, DATA_MAX_SIZE-1, 0, 88); //7
     printf("Element is found with index = %i \n", ret);
 
     return  0;
@@ -28,15 +28,21 @@ int main()
 
 
 /**
- * @brief 
+ * @brief Performs a binary search on a sorted array to find a specific element.
  * 
- * @param data 
- * @param endIndex 
- * @param startIndex 
- * @param reqData 
- * @return sint32 
+ * This function searches for a given element in a sorted array using the binary search algorithm.
+ * It divides the array into two halves, compares the middle element with the requested value,
+ * and adjusts the search range accordingly. The search continues until the element is found
+ * or the search range is exhausted.
+ * 
+ * @param data The sorted array of elements to be searched.
+ * @param endIndex The index representing the end of the search range.
+ * @param startIndex The index representing the start of the search range.
+ * @param reqData The element to be searched for.
+ * @return sint32 The index of the first occurrence of the requested element in the array,
+ *         or ELEMENT_NOT_FOUND if the element is not present in the array.
  */
-sint32 binarySearchAlgorithm_1(uint32 data[], uint32 endIndex, uint32 startIndex ,uint32 reqData)
+sint32 binarySearchAlgorithm_1(uint32 data[], uint32 endIndex, uint32 startIndex, uint32 reqData)
 {
     uint32 mid = 0;
 
@@ -63,8 +69,8 @@ sint32 binarySearchAlgorithm_1(uint32 data[], uint32 endIndex, uint32 startIndex
     return ELEMENT_NOT_FOUND;
 }
 
-
-sint32 binarySearchAlgorithm_2(uint32 data[], uint32 endIndex, uint32 startIndex ,uint32 reqData)
+// Binary search but using recursion.
+sint32 binarySearchAlgorithm_2(uint32 data[], uint32 endIndex, uint32 startIndex, uint32 reqData)
 {
     
     uint32 mid = 0;
@@ -80,12 +86,10 @@ sint32 binarySearchAlgorithm_2(uint32 data[], uint32 endIndex, uint32 startIndex
         else if (reqData > data[mid])
         {
             return binarySearchAlgorithm_2(data, endIndex, mid+1 , reqData);
-            //startIndex = mid + 1;
         }
         else
         {
             return binarySearchAlgorithm_2(data, mid-1, startIndex , reqData);
-            //endIndex = mid - 1; 
         }
 
     }
