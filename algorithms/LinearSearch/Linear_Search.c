@@ -5,11 +5,12 @@
 #define ELEMENT_NOT_FOUND -1
 
 typedef unsigned int uint32;
+typedef signed int sint32;
 
 uint32 My_Data[DATA_MAX_SIZE] = {11, 22, 33, 44, 55, 66, 77, 88 ,99 ,100};
 
-uint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData);
-uint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData);
+sint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData);
+sint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData);
 
 int main()
 {
@@ -37,7 +38,7 @@ int main()
  * @return uint32 The index of the first occurrence of the requested element in the array,
  *         or ELEMENT_NOT_FOUND if the element is not present in the array.
  */
-uint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData)
+sint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData)
 {
     uint32 index = 0;
 
@@ -52,7 +53,7 @@ uint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData)
 }
 
 
-uint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData)
+sint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData)
 {
     uint32 leftIndex = 0;
     uint32 rightIndex = size - 1;
