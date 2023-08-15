@@ -35,7 +35,7 @@ int main()
  * @param data The array of elements to be searched.
  * @param size The number of elements in the array.
  * @param reqData The element to be searched for.
- * @return uint32 The index of the first occurrence of the requested element in the array,
+ * @return sint32 The index of the first occurrence of the requested element in the array,
  *         or ELEMENT_NOT_FOUND if the element is not present in the array.
  */
 sint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData)
