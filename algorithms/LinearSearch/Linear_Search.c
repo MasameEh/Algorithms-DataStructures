@@ -15,7 +15,7 @@ sint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData);
 int main()
 {
     
-    uint32 ret = linearSearchAlgorithm_1(My_Data, DATA_MAX_SIZE, 99); //6
+    sint32 ret = linearSearchAlgorithm_1(My_Data, DATA_MAX_SIZE, 99); //6
     printf("Element is found with index = %i \n", ret);
     
     ret = linearSearchAlgorithm_2(My_Data, DATA_MAX_SIZE, 99); //6
@@ -49,6 +49,7 @@ sint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData)
             return index;
         }
     }
+    // If we reach here, then element was not present
     return ELEMENT_NOT_FOUND;
 }
 
@@ -72,5 +73,6 @@ sint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData)
         leftIndex++;
         rightIndex--;
     }
+    // If we reach here, then element was not present
     return ELEMENT_NOT_FOUND;
 }
