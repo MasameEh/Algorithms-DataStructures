@@ -69,7 +69,7 @@ sint32 binarySearchAlgorithm_1(sint32 data[], uint32 endIndex, uint32 startIndex
 
     }
     // If we reach here, then element was not present
-    return -1;
+    return ELEMENT_NOT_FOUND;
 }
 
 // Binary search but using recursion.
@@ -96,6 +96,6 @@ sint32 binarySearchAlgorithm_2(sint32 data[], uint32 endIndex, uint32 startIndex
 
     }
     // If we reach here, then element was not present
-    return -1;
+    return ELEMENT_NOT_FOUND;
 }
 
