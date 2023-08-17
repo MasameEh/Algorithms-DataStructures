@@ -7,7 +7,7 @@
 typedef unsigned int uint32;
 typedef signed int sint32;
 
-uint32 My_Data[DATA_MAX_SIZE] = {11, 22, 33, 44, 55, 66, 77, 88 ,99 ,100};
+uint32 data[DATA_MAX_SIZE] = {11, 22, 33, 44, 55, 66, 77, 88 ,99 ,100};
 
 sint32 linearSearchAlgorithm_1(uint32 data[], uint32 size, uint32 reqData);
 sint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData);
@@ -15,10 +15,10 @@ sint32 linearSearchAlgorithm_2(uint32 data[], uint32 size, uint32 reqData);
 int main()
 {
     
-    sint32 ret = linearSearchAlgorithm_1(My_Data, DATA_MAX_SIZE, 99); //6
+    sint32 ret = linearSearchAlgorithm_1(data, DATA_MAX_SIZE, 99); //6
     printf("Element is found with index = %i \n", ret);
     
-    ret = linearSearchAlgorithm_2(My_Data, DATA_MAX_SIZE, 99); //6
+    ret = linearSearchAlgorithm_2(data, DATA_MAX_SIZE, 99); //6
     printf("Element is found with index = %i \n", ret);
 
     return  0;
