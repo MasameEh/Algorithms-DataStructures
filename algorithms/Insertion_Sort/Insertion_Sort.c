@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 #define DATA_MAX_SIZE  10
 
 typedef unsigned int uint32;
@@ -10,11 +9,11 @@ typedef signed int sint32;
 void insertionSortAlgorithm(sint32 data[], uint32 size);
 void printArray(sint32 data[], uint32 size);
 
-sint32 data[DATA_MAX_SIZE] = {80, 18, 59, -5, -3, 17, 3, 12, 43, 56};
-
+sint32 data[DATA_MAX_SIZE] = {80, 18, 59, -5, -3, 17, 3, -12, 43, 56};
 
 int main()
 {
+
     printArray(data, DATA_MAX_SIZE);
     insertionSortAlgorithm(data, DATA_MAX_SIZE);
     printArray(data, DATA_MAX_SIZE);
