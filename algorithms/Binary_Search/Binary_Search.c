@@ -7,7 +7,7 @@
 typedef unsigned int uint32;
 typedef signed int sint32;
 
-sint32 My_Data[DATA_MAX_SIZE] = {11, 22, 33, 44, 55, 66, 77, 88 ,99 ,100};
+sint32 data[DATA_MAX_SIZE] = {11, 22, 33, 44, 55, 66, 77, 88 ,99 ,100};
 
 sint32 binarySearchAlgorithm_1(sint32 data[], uint32 endIndex, uint32 startIndex, sint32 reqData);
 sint32 binarySearchAlgorithm_2(sint32 data[], uint32 endIndex, uint32 startIndex, sint32 reqData);
@@ -17,13 +17,13 @@ int main()
     
     sint32 ret = 0;
     
-    ret = binarySearchAlgorithm_1(My_Data, DATA_MAX_SIZE-1, 0, 11); //0
+    ret = binarySearchAlgorithm_1(data, DATA_MAX_SIZE-1, 0, 11); //0
     printf("Element is found with index = %i \n", ret);
 
-    ret = binarySearchAlgorithm_2(My_Data, DATA_MAX_SIZE-1, 0, 12); //-1
+    ret = binarySearchAlgorithm_2(data, DATA_MAX_SIZE-1, 0, 12); //-1
     printf("Element is found with index = %i \n", ret);
 
-    ret = binarySearchAlgorithm_1(My_Data, DATA_MAX_SIZE-1, 0, 100); //9
+    ret = binarySearchAlgorithm_1(data, DATA_MAX_SIZE-1, 0, 100); //9
     printf("Element is found with index = %i \n", ret);
 
 
