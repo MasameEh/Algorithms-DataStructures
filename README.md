@@ -38,6 +38,3 @@ Contributions are welcome! If you'd like to contribute to this repository, pleas
 5. Push the branch to your fork: `git push origin feature/my-contribution`
 6. Create a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
