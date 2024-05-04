@@ -24,7 +24,7 @@ public class InsertionSort
 
     public static void main(String args[])
     {
-        int arr[] = { 44, 1, 13, 9, 6 };
+        int arr[] = { 44,   , 13, 9, 6 };
         
         InsertionSort ob = new InsertionSort();
         ob.insertionSort(arr);

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Ignore compiled binaries and objects
 *.exe
 *.o
@@ -6,3 +7,8 @@
 .DS_Store
 .idea/
 .vscode/
+=======
+vscode/
+.class
+
+>>>>>>> Stashed changes
