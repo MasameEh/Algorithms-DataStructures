@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-This repository contains implementations of various algorithms and data structures in C.
+This repository contains implementations of various algorithms and data structures.
 
 ## Table of Contents
 
