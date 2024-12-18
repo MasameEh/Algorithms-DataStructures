@@ -54,9 +54,10 @@ void bubbleSortAlgorithm(sint32 data[], uint32 size)
 {
     uint32 i = 0, j = 0;
     bool swapped = false;
-
+        
     for (i = 0; i < size - 1; i++)
     {
+        swapped = false; 
         for (j = 0; j < size - 1 - i; j++)
         {
             if(data[j] > data[j + 1])

@@ -13,9 +13,9 @@ class CountingSort
             max = Math.max(value, max);
         }
 
-        int[] countingArr = new int[max + 1];
+        int[] countingArr = new int[max + 1]; 
         Arrays.fill(countingArr, 0);
-
+   
         for(int i = 0; i < nums.length; i++)
         {
             countingArr[nums[i]]++;
